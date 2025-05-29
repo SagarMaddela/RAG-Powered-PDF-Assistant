@@ -128,6 +128,10 @@ pdf-chatbot/
 
    Enter your questions in the chat interface. The system will retrieve relevant information from the uploaded PDF and provide answers.
 
+##  Model Architecture
+
+![Architecture](./screenshots/Architecture.png)
+
 ## 🖼️ Screenshots
 
 ![image1](./screenshots/image1.png)
