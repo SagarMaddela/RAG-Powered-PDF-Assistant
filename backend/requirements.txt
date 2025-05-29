@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+langchain
+pymupdf
+faiss-cpu
+transformers
+huggingface-hub
+textwrap3
+ollama
+langchain-community
+sentence-transformers

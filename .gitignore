@@ -1,0 +1,25 @@
+# Node modules (React)
+frontend/node_modules/
+frontend/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+
+# VSCode & OS files
+.vscode/
+.DS_Store
+
+# Virtual environment if in root
+.venv/
+
+# Byte-compiled / optimized / DLL files
+*.so
+
+# FastAPI CORS / compiled stuff
+*.log

@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: pdfchat-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/vectorstore:/app/vectorstore
+    networks:
+      - ragnet
+
+  frontend:
+    build: ./frontend
+    container_name: pdfchat-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - ragnet
+
+networks:
+  ragnet:
+    driver: bridge
