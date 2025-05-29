@@ -131,7 +131,12 @@ pdf-chatbot/
 ## 🖼️ Screenshots
 
 ![image1](./screenshots/image1.png)
-![image2](./screenshots/image2.png)
+
+![image4](./screenshots/image4.png)
+
+![image5](./screenshots/image5.png)
+
+![image6](./screenshots/image6.png)
 
 ## 🧰 API Endpoints
 
