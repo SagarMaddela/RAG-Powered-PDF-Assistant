@@ -88,7 +88,7 @@ pdf-chatbot/
 
 2. **Set Up Environment**
 
-   Make sure you installed * [Ollama](https://ollama.com/) in your local system :
+   Make sure you installed [Ollama](https://ollama.com/) in your local system :
 
    ```env
    ollama pull llama3 //Can take upto 8K tokens
@@ -130,22 +130,8 @@ pdf-chatbot/
 
 ## 🖼️ Screenshots
 
-Include screenshots of your application to showcase its interface and features:
-
-```
-📷 Screenshot 1: Upload PDF Interface
-📷 Screenshot 2: Chat Interface Responding to Queries
-📷 Screenshot 3: System Architecture or Backend Console Logs
-```
-
-*(Place your actual images in a /screenshots or /assets folder and reference them with Markdown syntax if hosting on GitHub)*
-
-Example:
-
-```markdown
-![Upload Interface](./screenshots/upload.png)
-![Chat Interface](./screenshots/chat.png)
-```
+![image1](./screenshots/image1.png)
+![image2](./screenshots/image2.png)
 
 ## 🧰 API Endpoints
 
@@ -158,6 +144,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🙌 Acknowledgements
 
-* [llama3](https://ollama.com/library/llama3) and * [Mistral](https://ollama.com/library/mistral)  for providing powerful language models.
+* [llama3](https://ollama.com/library/llama3) and [Mistral](https://ollama.com/library/mistral)  for providing powerful language models.
 * [LangChain](https://www.langchain.com/) for facilitating the integration of language models with external data sources.
 * [FAISS](https://github.com/facebookresearch/faiss) for efficient similarity search.
