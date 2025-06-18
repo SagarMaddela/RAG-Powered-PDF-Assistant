@@ -47,34 +47,34 @@ const QuestionBox = ({ fileName }) => {
 
   return (
     <div className="w-full">
-      <div className="bg-white rounded-lg shadow-lg">
+      <div className="bg- rounded-lg shadow-lg">
         <div className="h-[600px] flex flex-col">
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.map((message, index) => (
-  <div
-    key={index}
-    className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-  >
-    <div
-      className={`max-w-[80%] rounded-2xl px-4 py-2 ${
-        message.type === 'user'
-          ? 'bg-green-600 text-white'
-          : 'bg-gray-100 text-gray-800 text-start'
-      }`}
-    >
-      {message.type === 'assistant'
-        ? message.content
-            .trim()
-            .split(/\n{2,}/) // Split by double newlines for paragraphs
-            .map((para, i) => (
-              <p key={i} style={{ marginBottom: '0.5em' }}>
-                {para.replace(/\s+/g, ' ').trim()}
-              </p>
-            ))
-        : message.content}
-    </div>
-  </div>
-))}
+            <div
+              key={index}
+              className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
+              <div
+                className={`max-w-[80%] rounded-2xl px-4 py-2 ${
+                  message.type === 'user'
+                    ? 'bg-green-600 text-white'
+                    : 'bg-gray-100 text-gray-800 text-start'
+                }`}
+              >
+                {message.type === 'assistant'
+                  ? message.content
+                      .trim()
+                      .split(/\n{2,}/) // Split by double newlines for paragraphs
+                      .map((para, i) => (
+                        <p key={i} style={{ marginBottom: '0.5em' }}>
+                          {para.replace(/\s+/g, ' ').trim()}
+                        </p>
+                      ))
+                  : message.content}
+              </div>
+            </div>
+          ))}
 
             {loading && (
               <div className="flex justify-start">

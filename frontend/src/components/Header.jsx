@@ -7,8 +7,7 @@ const Header = ({ onUploadClick, fileName }) => {
     <header className="bg-white border-b border-gray-200">
       <div className="container mx-auto px-2 sm:px-4 h-16 flex items-center justify-between">
         <div className="flex items-center">
-          {/* <img src="https://i.imgur.com/YEK3kXz.png" alt="Planet" className="h-8" /> */}
-          <img src={logo} alt="Logo" className="h-12" />
+          <img src={logo} alt="Logo" className="h-12"/>
         </div>
         <div className="flex items-center space-x-2 sm:space-x-4">
           {fileName && (

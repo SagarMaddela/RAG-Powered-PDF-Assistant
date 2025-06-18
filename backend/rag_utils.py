@@ -9,13 +9,15 @@ from langchain import PromptTemplate
 # Globals
 VECTOR_DIR = "vectorstore"
 MODEL_NAME = "all-MiniLM-L6-v2"
-LLM = Ollama(model="mistral", temperature=0)
+LLM = Ollama(model="llama3", temperature=0)
 
 template = """
 ### System:
-You are a helpful assistant that answers questions based on the provided context from a PDF document. Use the information in the context to provide accurate and concise answers. Keep your responses in 100 words.
+You are a helpful assistant that answers questions based on the provided context from a PDF document.
+Use the information in the context to provide accurate and concise answers. Keep your responses in paragraphs or points and provide sufficient space between them for readability.
+If the answer is in point form, use bullet points for clarity.Ensure that each point is separated by a newline for better readability.
 If the answer is not found in the context, respond with "I don't know" or "The answer is not in the document." Do not make up answers.
-Always cite the source document in your response.
+
 
 ### Context:
 {context}
@@ -38,7 +40,7 @@ def process_pdf(file_path):
     docs = loader.load()
 
     # Responsible for splitting the documents into several chunks
-    splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=20)
+    splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
 
     # Splitting the documents into chunks
     chunks = splitter.split_documents(docs)
